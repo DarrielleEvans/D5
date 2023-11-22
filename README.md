@@ -1,7 +1,7 @@
 <h1 align="center">Deploy Banking App<h1> 
   
 # Purpose
-In previous deployments, I deployed the application on the same instance that ran the Jenkins server. After researching, I found that using the Jenkins manager/ agent architecture is perfect for scalability, distributing resources, and building applications simultaneously. Currently, I am deploying 1 version of the banking application, but implementing the Jenkins manager/ agent setup will allow me to scale if needed.
+The purpose of this deployment is to deploy an application using Terraform to quickly spin up the infrastructure and Jenkins to create a ci/cd pipeline. In previous deployments, the application was hosted on the same instance as the Jenkins server. However, in this current deployment, the application is being deployed on a dedicated instance via an SSH connection. This separation of the Jenkins server and the application instance enhances security, facilitates scalability, and simplifies future troubleshooting efforts
 # Deployment Steps 
 # Additional Supporting Tools
 # Troubleshooting
