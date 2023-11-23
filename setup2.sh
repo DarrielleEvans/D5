@@ -1,8 +1,8 @@
 #!/bin/bash
-rm -rf c4_deployment-5
+rm -rf D5
 source test/bin/activate
 git clone https://github.com/DarrielleEvans/D5.git
-cd c4_deployment-5
+cd D5
 pip install -r requirements.txt
 pip install gunicorn
 python database.py
