@@ -35,9 +35,15 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   - sudo apt install -y python3.7-venv: This command installs the Python virtual environment to run Python.
 ## Step 5
 - Setup the Jenkins CI/CD pipeline
-  -  I created a multibranch pipeline in Jenkins to work with my GitHub repository, the primary code source. Due to having two specifically    named Jenkins files in the repository, I accurately specified the names of these Jenkins files in the script path section of the    v        configuration. This precise setup ensures that Jenkins correctly identifies and utilizes the appropriate Jenkins file for each branch in     the pipeline.
+  -  I created a multibranch pipeline in Jenkins to work with my GitHub repository, the primary code source. Due to having two specifically    named Jenkins files in the repository, I accurately specified the names of these Jenkins files in the script path section of the       configuration. This setup ensures that Jenkins correctly identifies and utilizes the appropriate Jenkins file for each branch in the pipeline.
+- Jenkinsv1 has the following stages:
+  - Build: This stage prepares the environment for building/testing the application by setting up the Python virtual environment (python3.7 -m venv test), activating it, and installing the required dependencies listed in requirements.txt.  
+  - Test: The testing stage installs and utilizes Pytest to run tests on the application. This stage tests if the homepage loads correctly       by expecting and checking for a 200 response code.
+  - Deploy: 
+  - Remind  
 # Additional Supporting Tools
 # Troubleshooting
+- When running Terraform apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
 # Application Deployed
 # System Diagram
 # Optimization 
