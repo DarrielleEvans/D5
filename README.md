@@ -20,19 +20,19 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   - Security Group Ports: 8080, 8000, 22: The application will be accessed on port 8000, the instances are accessed on port 22, and Jenkins is accessed on port 8080.
 ## Step 3
 - Setup the Jenkins Server
-  - To deploy our app on a separate EC2 instance, we need to first log into the Jenkins server as the Jenkins user. Once there, we'll generate SSH keys. These keys are then shared       with the other instance, ensuring we can set up an SSH connection.
--  Run the following commands to install the necessary software and packages to run the ci/cd pipeline.
+  - To deploy our app on a separate EC2 instance, we need to first log into the Jenkins server as the Jenkins user. Once there, we'll generate SSH keys. These keys are then shared         with the other instance, ensuring we can set up an SSH connection.
+  -  Run the following commands to install the necessary software and packages to run the ci/cd pipeline.
   - sudo apt install -y software-properties-common: This installation provides the tools to manage software packages.
-  - sudo add-apt-repository -y ppa:deadsnakes/ppa: The banking application uses python:3.7. Because this version is not installed in Ubuntu's standard repository, running this command       will add deadsnakes to the Ubuntu repository, which allows me to use the newer version of python to run the banking application.
-  - sudo apt install -y python3.7: This command installs python version 3.7 on the instance that is needed to run the banking application.
-  - sudo apt install -y python3.7-venv: This command installs the python virtual environment to run python.
+  - sudo add-apt-repository -y ppa:deadsnakes/ppa: The banking application uses python:3.7. Because this version is not installed in Ubuntu's standard repository, running this command     will add deadsnakes to the Ubuntu repository, which allows me to use the newer version of python to run the banking application.
+  - sudo apt install -y python3.7: This command installs python version 3.7 on the instance needed to run the banking application.
+  - sudo apt install -y python3.7-venv: This command installs the Python virtual environment to run Python.
 ## Step 4
 - Setup Application Server
   - Run the following commands to install the necessary software and packages to run the application.
   - sudo apt install -y software-properties-common: This installation provides the tools to manage software packages.
-  - sudo add-apt-repository -y ppa:deadsnakes/ppa: The banking application uses python:3.7. Because this version is not installed in Ubuntu's standard repository, running this command       will add deadsnakes to the ubuntu repository, which allows me to use the newer version of python to run the banking application.
-  - sudo apt install -y python3.7: This command installs python version 3.7 on the instance which is needed to run the banking application.
-  - sudo apt install -y python3.7-venv: This is command installs the python virtual environment to run python.
+  - sudo add-apt-repository -y ppa:deadsnakes/ppa: The banking application uses python:3.7. Because this version is not installed in Ubuntu's standard repository, running this command     will add deadsnakes to the ubuntu repository, which allows me to use the newer version of python to run the banking application.
+  - sudo apt install -y python3.7: This command installs python version 3.7 on the instance that is needed to run the banking application.
+  - sudo apt install -y python3.7-venv: This command installs the python virtual environment to run python.
 # Additional Supporting Tools
 # Troubleshooting
 # Application Deployed
