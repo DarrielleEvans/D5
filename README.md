@@ -30,9 +30,9 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 - Setup Application Server
   - Run the following commands to install the necessary software and packages to run the application.
   - sudo apt install -y software-properties-common: This installation provides the tools to manage software packages.
-  - sudo add-apt-repository -y ppa:deadsnakes/ppa: The banking application uses python:3.7. Because this version is not installed in Ubuntu's standard repository, running this command     will add deadsnakes to the ubuntu repository, which allows me to use the newer version of python to run the banking application.
-  - sudo apt install -y python3.7: This command installs python version 3.7 on the instance that is needed to run the banking application.
-  - sudo apt install -y python3.7-venv: This command installs the python virtual environment to run python.
+  - sudo add-apt-repository -y ppa:deadsnakes/ppa: The banking application uses python:3.7. Because this version is not installed in Ubuntu's standard repository, running this command     will add deadsnakes to the Ubuntu repository, which allows me to use the newer version of python to run the banking application.
+  - sudo apt install -y python3.7: This command installs python version 3.7 on the instance needed to run the banking application.
+  - sudo apt install -y python3.7-venv: This command installs the Python virtual environment to run Python.
 ## Step 5
 - Setup the Jenkins CI/CD pipeline
   -  
