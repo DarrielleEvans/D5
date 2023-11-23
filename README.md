@@ -17,7 +17,7 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   - 2 Public Subnets: Deploying two public subnets to host an instance within each subnet.
   - 2 EC2's: Utilizing 2 instances to separate the Jenkins and application server to enhance security, decrease the likeliness of                         downtime, and support scalability if needed.
   - 1 Route Table: Utilizing a route table to route traffic to and from the subnets.
-  - Security Group Ports: 8080, 8000, 22: The application will be accessed on port 8000, the instances are accessed on port 22.
+  - Security Group Ports: 8080, 8000, 22: The application will be accessed on port 8000, the instances are accessed on port 22, and Jenkins is accessed on port 8080.
 # Additional Supporting Tools
 # Troubleshooting
 # Application Deployed
