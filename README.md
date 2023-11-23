@@ -35,7 +35,7 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   - sudo apt install -y python3.7-venv: This command installs the Python virtual environment to run Python.
 ## Step 5
 - Setup the Jenkins CI/CD pipeline
-  -  
+  -  I created a multibranch pipeline in Jenkins to work with my GitHub repository, the primary code source. Due to having two specifically    named Jenkins files in the repository, I accurately specified the names of these Jenkins files in the script path section of the    v        configuration. This precise setup ensures that Jenkins correctly identifies and utilizes the appropriate Jenkins file for each branch in     the pipeline.
 # Additional Supporting Tools
 # Troubleshooting
 # Application Deployed
