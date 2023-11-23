@@ -39,8 +39,8 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 - Jenkinsv1 has the following stages:
   - Build: This stage prepares the environment for building/testing the application by setting up the Python virtual environment (python3.7 -m venv test), activating it, and installing the required dependencies listed in requirements.txt.  
   - Test: The testing stage installs and utilizes Pytest to run tests on the application. This stage tests if the homepage loads correctly       by expecting and checking for a 200 response code.
-  - Deploy: 
-  - Remind  
+  - Deploy: This stage uses SSH to deploy the application on a remote server.
+  - Remind: This stage alerts the engineer that the application should be live on the remote server.  
 # Additional Supporting Tools
 # Troubleshooting
 - When running Terraform apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
