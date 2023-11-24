@@ -1,5 +1,5 @@
 #!/bin/bash
-#rm -rf D5
+rm -rf D5
 source test/bin/activate
 git clone https://github.com/DarrielleEvans/D5.git
 cd D5
