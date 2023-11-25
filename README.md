@@ -41,13 +41,14 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   - Test: The testing stage installs and utilizes Pytest to run tests on the application. This stage tests if the homepage loads correctly       by expecting and checking for a 200 response code.
   - Deploy: This stage uses SSH to deploy the application on a remote server.
   - Remind: This stage alerts the engineer that the application should be live on the remote server.
-  <img width="1069" alt="Screen Shot 2023-11-24 at 9 49 45 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/f29c1744-01fa-4c7e-b7c3-b28fff359def">
+<img width="1003" alt="Screen Shot 2023-11-25 at 12 36 52 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/38060a83-68c6-4623-895e-bf766c2e8cca">
 
 - Jenkinsfilev2 has the following stages:
   - Clean: This stage executes the pkill script, which terminates the Gunicorn process. This step is crucial for ensuring a smooth deployment of new code by preventing conflicts between different application versions.
   - Deploy: This stage deploys the new version of the application.
   - Once I have verified that the new features work as intended, I merge the new branch with main to ensure the main branch is updated with      the latest application version.
-<img width="1351" alt="Screen Shot 2023-11-25 at 12 34 12 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/80bf549e-50b6-4c48-8a31-1576652fc59e">
+<img width="683" alt="Screen Shot 2023-11-25 at 12 36 10 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/f8a68eb2-a206-46e0-a5cb-e64e9d02f27a">
+
 
 # Additional Supporting Tools
 # Troubleshooting
@@ -55,6 +56,9 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 # Application Deployed
 ### Version 1 of the Application Deployed
 <img width="1422" alt="Screen Shot 2023-11-24 at 10 13 00 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/590077fc-37d1-4bd8-88e2-2f23b3a51314">
+### Version 2 of the Application Deployed
+<img width="1351" alt="Screen Shot 2023-11-25 at 12 34 12 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/ccdec9de-8f22-45c0-83d0-283b192da7b1">
+
 
 # System Diagram
 ![D5 drawio](https://github.com/DarrielleEvans/D5/assets/89504317/9ecb9c5b-5869-4dcf-8ef8-bb151679a7bf)
