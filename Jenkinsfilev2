@@ -6,8 +6,8 @@ pipeline {
                 sh '''
                 #!/bin/bash
                 echo "command to run the pkill.sh"
-                scp pkill.sh ubuntu@34.201.140.137:/home/ubuntu/
-                ssh ubuntu@34.201.140.137 "cd /home/ubuntu/ && sudo chmod 777 pkill.sh && ./pkill.sh"
+                scp pkill.sh ubuntu@34.229.54.189:/home/ubuntu/
+                ssh ubuntu@34.229.54.189 "cd /home/ubuntu/ && sudo chmod 777 pkill.sh && ./pkill.sh"
                 '''
             }
         }
