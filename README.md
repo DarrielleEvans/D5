@@ -50,6 +50,9 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 # Troubleshooting
 - When running Terraform apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
 # Application Deployed
+### Version 1 of the Application Deployed
+<img width="1422" alt="Screen Shot 2023-11-24 at 10 13 00 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/590077fc-37d1-4bd8-88e2-2f23b3a51314">
+
 # System Diagram
 ![D5 drawio](https://github.com/DarrielleEvans/D5/assets/89504317/9ecb9c5b-5869-4dcf-8ef8-bb151679a7bf)
 
