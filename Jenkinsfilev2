@@ -37,7 +37,7 @@ pipeline {
                     sh 'git merge --no-ff Bankingv2 -m "Merging changes from Bankingv2 into main"'
 
                     // Push the changes back to the remote repository
-                    sh 'git push'
+                    sh 'git push origin main'
                 }
             }
         }
