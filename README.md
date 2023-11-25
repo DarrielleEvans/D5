@@ -45,7 +45,10 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 
 - Jenkinsfilev2 has the following stages:
   - Clean: This stage executes the pkill script, which terminates the Gunicorn process. This step is crucial for ensuring a smooth deployment of new code by preventing conflicts between different application versions.
-  - Deploy: This stage uses SSH to deploy the new version of the application on a remote server.
+  - Deploy: This stage deploys the new version of the application.
+  - Once I have verified that the new features work as intended, I merge the new branch with main to ensure the main branch is updated with      the latest application version.
+<img width="1351" alt="Screen Shot 2023-11-25 at 12 34 12 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/80bf549e-50b6-4c48-8a31-1576652fc59e">
+
 # Additional Supporting Tools
 # Troubleshooting
 - When running Terraform apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
