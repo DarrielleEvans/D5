@@ -51,7 +51,16 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 <img width="683" alt="Screen Shot 2023-11-25 at 12 36 10 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/f8a68eb2-a206-46e0-a5cb-e64e9d02f27a">
 
 
-# Additional Supporting Tools
+# Technologies used
+- Terraform
+- Jenkins
+- AWS with the following resources: VPC, 2 Availibility Zones, 2 EC2(Ubuntu), 2 Public Subnets, Internet Gateway, Route Table
+- Installations:
+  - sudo apt install -y software-properties-common
+  -  sudo add-apt-repository -y ppa:deadsnakes/ppa
+  -  sudo apt install -y python3.7
+  -  sudo apt install -y python3.7-venv}
+    
 # Troubleshooting
 - When running Terraform apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
 # Application Deployed
