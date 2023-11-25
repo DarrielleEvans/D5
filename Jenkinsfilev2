@@ -1,21 +1,46 @@
 pipeline {
-  agent any
-   stages {
-    stage ('Clean') {
-      steps {
-        sh '''#!/bin/bash
-        echo "command to run the pkill.sh"
-        '''
-     }
-   }
- stage ('Deploy') {
-  steps {
-     sh '''#!/bin/bash
-      echo "command to run the setup2.sh"
-      scp setup2.sh ubuntu@34.229.54.189:/home/ubuntu/
-      ssh ubuntu@34.229.54.189 'chmod 700 /home/ubuntu/setup2.sh && bash /home/ubuntu/setup2.sh'
-    '''
-      }
+    agent any
+    stages {
+        stage('Clean') {
+            steps {
+                sh '''
+                #!/bin/bash
+                echo "command to run the pkill.sh"
+                '''
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                #!/bin/bash
+                echo "command to run the setup2.sh"
+                scp setup2.sh ubuntu@34.229.54.189:/home/ubuntu/
+                ssh ubuntu@34.229.54.189 'chmod 700 /home/ubuntu/setup2.sh && bash /home/ubuntu/setup2.sh'
+                '''
+            }
+        }
+
+        stage('Merge Bankingv2 to Main') {
+            steps {
+                script {
+                    // Switch to Bankingv2 branch
+                    sh 'git checkout Bankingv2'
+
+                    // Grab the latest changes from the repository
+                    sh 'git fetch --all'
+
+                    // Switch to the main branch
+                    sh 'git checkout main'
+
+                    // Merge Bankingv2 into main
+                    sh 'git merge --no-ff Bankingv2 -m "Merging changes from Bankingv2 into main"'
+
+                    // Push the changes back to the remote repository
+                    sh 'git push origin main'
+                }
+            }
+        }
     }
-  }
 }
+
