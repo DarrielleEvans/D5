@@ -59,6 +59,7 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 <img width="1422" alt="Screen Shot 2023-11-24 at 10 13 00 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/590077fc-37d1-4bd8-88e2-2f23b3a51314">
 
 ### Version 2 of the Application Deployed
+
 <img width="1351" alt="Screen Shot 2023-11-25 at 12 34 12 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/ccdec9de-8f22-45c0-83d0-283b192da7b1">
 
 # System Diagram
