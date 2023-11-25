@@ -29,8 +29,8 @@ stage ('Deploy') {
 steps {
 sh '''#!/bin/bash
 echo "command to run the setup.sh"
-scp setup.sh ubuntu@3.89.157.68:/home/ubuntu/
-ssh ubuntu@3.89.157.68 'chmod 700 /home/ubuntu/setup.sh && bash /home/ubuntu/setup.sh'
+scp setup.sh ubuntu@34.229.54.189:/home/ubuntu/
+ssh ubuntu@34.229.54.189 'chmod 700 /home/ubuntu/setup.sh && bash /home/ubuntu/setup.sh'
 '''
 }
 }
