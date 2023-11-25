@@ -41,6 +41,8 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   - Test: The testing stage installs and utilizes Pytest to run tests on the application. This stage tests if the homepage loads correctly       by expecting and checking for a 200 response code.
   - Deploy: This stage uses SSH to deploy the application on a remote server.
   - Remind: This stage alerts the engineer that the application should be live on the remote server.
+  <img width="1069" alt="Screen Shot 2023-11-24 at 9 49 45 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/f29c1744-01fa-4c7e-b7c3-b28fff359def">
+
 - Jenkinsfilev2 has the following stages:
   - Clean: This stage executes the pkill script, which terminates the Gunicorn process. This step is crucial for ensuring a smooth deployment of new code by preventing conflicts between different application versions.
   - Deploy: This stage uses SSH to deploy the new version of the application on a remote server.
