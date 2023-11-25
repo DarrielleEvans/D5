@@ -44,6 +44,7 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 <img width="1003" alt="Screen Shot 2023-11-25 at 12 36 52 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/38060a83-68c6-4623-895e-bf766c2e8cca">
 
 - Jenkinsfilev2 has the following stages:
+- I created a second pipeline to run the Bankingv2 branch using the Jenkinsfilev2
   - Clean: This stage executes the pkill script, which terminates the Gunicorn process. This step is crucial for ensuring a smooth deployment of new code by preventing conflicts between different application versions.
   - Deploy: This stage deploys the new version of the application.
   - Once I have verified that the new features work as intended, I merge the new branch with main to ensure the main branch is updated with      the latest application version.
@@ -59,10 +60,10 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 ### Version 2 of the Application Deployed
 <img width="1351" alt="Screen Shot 2023-11-25 at 12 34 12 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/ccdec9de-8f22-45c0-83d0-283b192da7b1">
 
-
 # System Diagram
 ![D5 drawio](https://github.com/DarrielleEvans/D5/assets/89504317/9ecb9c5b-5869-4dcf-8ef8-bb151679a7bf)
 
 
 
 # Optimization 
+The application is currently located in public subnets. Given that it is used internally by employees and does not require access beyond the bank's internal network, it should be relocated to private subnets. This will enhance security, which is critical for managing customers' bank accounts and personal information.
