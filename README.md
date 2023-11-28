@@ -5,7 +5,6 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 # Deployment Steps 
 ## Step 1 
 - Plan the deployment
-  - Create a deployment diagram using a professional diagramming tool like Draw.io
   - Diagram the deployment using a professional diagramming tool such as Draw.io.
   - Create a GitHub repository and upload source code and related files.
   - Identify the technology being utilized.
