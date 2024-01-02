@@ -1,7 +1,7 @@
 <h1 align="center">Deploy Banking App<h1>   
   
 # Purpose  
-This deployment aims to deploy an application using Terraform to quickly spin up the infrastructure and use Jenkins to create a ci/cd pipeline. The application was hosted on the same instance as the Jenkins server in previous deployments. However, in this current deployment, the application is being deployed on a dedicated instance via an SSH connection. This separation of the Jenkins server and the application instance enhances security, facilitates scalability, and simplifies future troubleshooting efforts.
+This deployment aims to deploy an application using Terraform to quickly spin up the infrastructure and use Jenkins to create a ci/cd pipeline. The application was hosted on the same instance as the Jenkins server in previous deployments. However, in this current deployment, the application is being deployed on a dedicated instance via an SSH connection. Separating the Jenkins server and the application instance enhances security, facilitates scalability, and simplifies future troubleshooting efforts.
 # Deployment Steps 
 ## Step 1 
 - Plan the deployment
@@ -53,7 +53,7 @@ This deployment aims to deploy an application using Terraform to quickly spin up
 # Technologies used
 - Terraform
 - Jenkins
-- AWS with the following resources: VPC, 2 Availibility Zones, 2 EC2(Ubuntu), 2 Public Subnets, Internet Gateway, Route Table
+- AWS with the following resources: VPC, 2 Availability Zones, 2 EC2(Ubuntu), 2 Public Subnets, Internet Gateway, Route Table
 - Installations:
   - sudo apt install -y software-properties-common
   -  sudo add-apt-repository -y ppa:deadsnakes/ppa
@@ -61,7 +61,7 @@ This deployment aims to deploy an application using Terraform to quickly spin up
   -  sudo apt install -y python3.7-venv}
     
 # Troubleshooting
-- When running Terraform apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
+- When running Terraform, apply to create the infrastructure, I tried to change the CIDR block IP ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies by running Terraform destroy, then rerun Terraform plan and Terraform apply.
 # Application Deployed
 ### Version 1 of the Application Deployed
 <img width="1422" alt="Screen Shot 2023-11-24 at 10 13 00 PM" src="https://github.com/DarrielleEvans/D5/assets/89504317/590077fc-37d1-4bd8-88e2-2f23b3a51314">
